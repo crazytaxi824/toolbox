@@ -1,9 +1,9 @@
 package xis
 
 // InStr 检查string值在一个string slice中是否存在
-func InStr(str string, s []string) bool {
-	for k := range s {
-		if str == s[k] {
+func InStr(s string, ss []string) bool {
+	for k := range ss {
+		if s == ss[k] {
 			return true
 		}
 	}
@@ -11,9 +11,9 @@ func InStr(str string, s []string) bool {
 }
 
 // InInt 检查int值在一个int slice中是否存在
-func InInt(is int, i []int) bool {
-	for k := range i {
-		if is == i[k] {
+func InInt(i int, is []int) bool {
+	for k := range is {
+		if i == is[k] {
 			return true
 		}
 	}
@@ -21,9 +21,9 @@ func InInt(is int, i []int) bool {
 }
 
 // InInt64 检查int64值在一个int64 slice中是否存在
-func InInt64(is int64, i []int64) bool {
-	for k := range i {
-		if is == i[k] {
+func InInt64(i64 int64, i64s []int64) bool {
+	for k := range i64s {
+		if i64 == i64s[k] {
 			return true
 		}
 	}
@@ -31,9 +31,9 @@ func InInt64(is int64, i []int64) bool {
 }
 
 // InFloat32 检查float32值在一个float32 slice中是否存在
-func InFloat32(fs float32, f []float32) bool {
-	for k := range f {
-		if fs == f[k] {
+func InFloat32(f32 float32, f32s []float32) bool {
+	for k := range f32s {
+		if f32 == f32s[k] {
 			return true
 		}
 	}
@@ -41,9 +41,9 @@ func InFloat32(fs float32, f []float32) bool {
 }
 
 // InFloat64 检查float64值在一个float64 slice中是否存在
-func InFloat64(fs float64, f []float64) bool {
-	for k := range f {
-		if fs == f[k] {
+func InFloat64(f64 float64, f64s []float64) bool {
+	for k := range f64s {
+		if f64 == f64s[k] {
 			return true
 		}
 	}
