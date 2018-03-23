@@ -52,14 +52,17 @@ func InFloat64(f64 float64, f64s []float64) bool {
 
 // EqualBytes 检查两个[]byte是否相等
 func EqualBytes(b1, b2 []byte) bool {
-	l1 := len(b1)
-	l2 := len(b2)
-	if l1 != l2 {
+	if len(b1) != len(b2) {
 		return false
 	}
 
-	for i := 0; i < l1; i++ {
-		if b1[i] != b2[i] {
+	if (b1 == nil) != (b2 == nil) {
+		return false
+	}
+
+	b2 = b2[:len(b1)]
+	for i, v := range b1 {
+		if v != b2[i] {
 			return false
 		}
 	}
